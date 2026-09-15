@@ -1,24 +1,13 @@
-# XAUUSD AI Signal Dashboard
-
-A local Streamlit dashboard that downloads gold market data, calculates technical indicators, trains a Random Forest classifier, and displays BUY, NEUTRAL, SELL probabilities.
-
-## Install
-
-```bash
-python -m pip install -r requirements.txt
-```
+# Simple XAUUSD Confluence Dashboard
 
 ## Run
-
 ```bash
+pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Then open the local address shown by Streamlit.
+## Deployment
+Upload `app.py` and `requirements.txt` to the root of your GitHub repository, then deploy `app.py` on Streamlit Community Cloud.
 
-## Notes
-
-- The default symbol `GC=F` is a gold futures proxy, not broker-specific spot XAUUSD.
-- For an actual trading workflow, replace the data-loading function with your authorized broker or market-data feed.
-- Model probabilities are estimates for research purposes, not guaranteed signals.
-- Validate spread, slippage, execution delay, and out-of-sample performance before any live use.
+## Important
+The default `GC=F` is a futures proxy. Confirm the pip definition and price feed with your broker. Backtested win rate is historical and excludes trading costs.
